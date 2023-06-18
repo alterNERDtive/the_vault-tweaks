@@ -38,6 +38,8 @@ public class Configuration {
     public static ConfigValue<Integer> JUNKMGMT_T3;
     public static ConfigValue<Integer> JUNKMGMT_T4;
 
+    public static BooleanValue COLOURLESS;
+
     static {
         Builder builder = new Builder();
         setupConfig(builder);
@@ -104,12 +106,14 @@ public class Configuration {
 
         // Bug fixes
         builder.push("Fixes");
-        builder.comment("Fix fake player research (e.g. Router + Botany Pots interaction, AE2 auto crafting, …) (CURRENTLY NON-FUNCTIONAL)");
+        builder.comment("Fix fake player research (e.g. Router + Botany Pots interaction, AE2 auto crafting, …)");
         FAKE_PLAYER_FIX = builder.define("fakePlayerResearchFix", true);
         builder.comment("Fix Routers unable to place Vault Rocks on your Vaultar");
         ROUTER_VAULTAR_FIX = builder.define("routerVaultarFix", true);
         builder.comment("Fix №5 fragments of all relics having half the weight");
         FRAGMENT_WEIGHT_FIX = builder.define("fragmentFix", true);
+        builder.comment("Fix performance issues when determining item colours (WARNING: will make jewels and unidentified gear go white)");
+        COLOURLESS = builder.define("colourPerformanceFix", true);
         builder.pop();
     }
 }
