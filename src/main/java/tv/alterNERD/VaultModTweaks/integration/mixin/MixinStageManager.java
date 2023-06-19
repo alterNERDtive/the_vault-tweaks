@@ -10,6 +10,8 @@ import iskallia.vault.research.StageManager;
 import iskallia.vault.world.data.PlayerResearchesData;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.player.Player;
+import net.minecraftforge.common.util.FakePlayer;
+import tv.alterNERD.VaultModTweaks.Configuration;
 
 @Mixin(StageManager.class)
 public abstract class MixinStageManager {
@@ -69,6 +71,9 @@ public abstract class MixinStageManager {
     }
 
     private static ResearchTree overrideGetResearchTree(Player player) {
+        if (!Configuration.FAKE_PLAYER_FIX.get() && player instanceof FakePlayer) {
+            return ResearchTree.empty();
+        }
         if (player.level.isClientSide) {
             return RESEARCH_TREE;
         }
