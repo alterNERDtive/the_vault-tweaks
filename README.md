@@ -5,7 +5,7 @@ a few bugs and brings a couple QoL and balance changes.
 
 All of these can be individually disabled in client & server config files.
 
-If you do not disabled the changes that affect expertises, I recommend a full 
+If you do not disable the changes that affect expertises, I recommend a full 
 expertise reset after installing this mod.
 
 ## Fixes
