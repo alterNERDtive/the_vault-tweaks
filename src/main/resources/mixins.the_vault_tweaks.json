@@ -8,6 +8,7 @@
         "MixinCrystalBuddingConfig",
         "MixinEnchantmentEntry",
         "MixinExpertisesGuiConfig",
+        "MixinPlayerResearchesData",
         "MixinStageManager",
         "MixinUnidentifiedRelicFragmentsConfig",
         "MixinVaultAltarBlock",

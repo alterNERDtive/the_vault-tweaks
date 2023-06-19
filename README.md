@@ -17,6 +17,7 @@ expertise reset after installing this mod.
   crafting)
 * Fake players can put Vault Rocks on the Altar again
 * Relic fragments \#5 are now equally as likely to drop as the others
+* AE2 auto crafting no longer requires manually giving its fake player all research
 
 ## Changes
 
