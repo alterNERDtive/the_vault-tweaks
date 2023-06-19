@@ -1,0 +1,23 @@
+﻿name: Create release on tag push
+
+on:
+  push:
+    tags:
+      - 'release/*'
+
+jobs:
+  build:
+    name: Build the_vault-tweaks
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+      - name: Draft release
+        uses: ncipollo/release-action@v1
+        with:
+          bodyFile: "CHANGELOG.md"
+          draft: true
