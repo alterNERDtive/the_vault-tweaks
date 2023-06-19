@@ -10,6 +10,7 @@ expertise reset after installing this mod.
 
 ## Fixes
 
+* Removed the “Andersite” “joke”.
 * Removed call to a colour handling event that is called several thousand times 
   per second; gives a noticeable performance boost, but turns jewels and 
   unidentified items white
