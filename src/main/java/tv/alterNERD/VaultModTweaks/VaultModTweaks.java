@@ -18,7 +18,8 @@ public class VaultModTweaks
     public VaultModTweaks()
     {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Configuration.CONFIG);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, Configuration.CONFIG);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, Configuration.CLIENTCONFIG);
     }
 
     private void setup(final FMLCommonSetupEvent event)

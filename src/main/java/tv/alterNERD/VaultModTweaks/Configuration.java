@@ -9,6 +9,7 @@ import net.minecraftforge.common.ForgeConfigSpec.ConfigValue;
 
 public class Configuration {
     public static final ForgeConfigSpec CONFIG;
+    public static final ForgeConfigSpec CLIENTCONFIG;
 
     public static BooleanValue FORTUNE_ENABLED;
     public static IntValue FORTUNE_LEVEL;
@@ -42,11 +43,7 @@ public class Configuration {
 
     static {
         Builder builder = new Builder();
-        setupConfig(builder);
-        CONFIG = builder.build();
-    }
 
-    private static void setupConfig(Builder builder) {
         // Fortune changes
         builder.push("Fortune");
         builder.comment("Replace the maximum Fortune level for the Vault Enchanter and remove the Fortunate Expertise");
@@ -112,8 +109,18 @@ public class Configuration {
         ROUTER_VAULTAR_FIX = builder.define("routerVaultarFix", true);
         builder.comment("Fix №5 fragments of all relics having half the weight");
         FRAGMENT_WEIGHT_FIX = builder.define("fragmentFix", true);
+        builder.pop();
+
+        CONFIG = builder.build();
+
+        builder = new Builder();
+        
+        // Bug fixes
+        builder.push("Fixes");
         builder.comment("Fix performance issues when determining item colours (WARNING: will make jewels and unidentified gear go white)");
         COLOURLESS = builder.define("colourPerformanceFix", true);
         builder.pop();
+
+        CLIENTCONFIG = builder.build();
     }
 }
