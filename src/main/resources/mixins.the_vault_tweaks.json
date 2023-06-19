@@ -10,6 +10,7 @@
         "MixinExpertisesGuiConfig",
         "MixinStageManager",
         "MixinUnidentifiedRelicFragmentsConfig",
+        "MixinVaultAltarBlock",
         "MixinVaultAltarConfig",
         "MixinVaultCharmConfig",
         "MixinVaultJewelCuttingConfig",
