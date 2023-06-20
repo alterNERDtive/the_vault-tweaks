@@ -1,6 +1,4 @@
-# devel
-
-# 3.10.1.2 (2023-06-20)
+# 3.10.1.3 (2023-06-21)
 
 * Removed Emerald cost from Vault Enchanter.
 * Lots of refactoring work behind the scenes.
