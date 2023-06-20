@@ -1,5 +1,6 @@
 {
     "required": true,
+    "require": 1,
     "package": "tv.alterNERD.VaultModTweaks.integration.mixin",
     "compatibilityLevel": "JAVA_17",
     "refmap": "mixins.the_vault_tweaks.refmap.json",

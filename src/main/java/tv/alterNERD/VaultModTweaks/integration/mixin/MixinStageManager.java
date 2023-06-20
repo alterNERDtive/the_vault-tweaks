@@ -1,3 +1,20 @@
+/**
+ * Copyright 2023 alterNERDtive.
+ * 
+ * This file is part of Vault Mod Tweaks.
+ * 
+ * Vault Mod Tweaks is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * Vault Mod Tweaks is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with Vault Mod Tweaks.  If not, see <https://www.gnu.org/licenses/>.
+ */
 package tv.alterNERD.VaultModTweaks.integration.mixin;
 
 import org.spongepowered.asm.mixin.Mixin;
@@ -12,7 +29,16 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.common.util.FakePlayer;
 import tv.alterNERD.VaultModTweaks.Configuration;
+import tv.alterNERD.VaultModTweaks.VaultModTweaks;
+import tv.alterNERD.VaultModTweaks.util.I18n;
 
+/**
+ * Changes the {@link iskallia.vault.research.StageManager} class for managing
+ * everything related to research locks.
+ * 
+ * Specifically, it actually returns a valid research tree for fake players
+ * (e.g. Modular routers, AE2 Molecular Assemblers).
+ */
 @Mixin(StageManager.class)
 public abstract class MixinStageManager {
     @Shadow(remap = false)
@@ -28,7 +54,7 @@ public abstract class MixinStageManager {
         remap = false
     )
     private static ResearchTree overrideOnItemCrafted(Player player) {
-        return overrideGetResearchTree(player);
+        return getResearchTreeOverride(player);
     }
 
     @Redirect(
@@ -41,7 +67,7 @@ public abstract class MixinStageManager {
         remap = false
     )
     private static ResearchTree overrideOnBlockInteraction(Player player) {
-        return overrideGetResearchTree(player);
+        return getResearchTreeOverride(player);
     }
 
     @Redirect(
@@ -54,7 +80,7 @@ public abstract class MixinStageManager {
         remap = false
     )
     private static ResearchTree overrideOnItemUse(Player player) {
-        return overrideGetResearchTree(player);
+        return getResearchTreeOverride(player);
     }
 
     @Redirect(
@@ -67,11 +93,18 @@ public abstract class MixinStageManager {
         remap = false
     )
     private static ResearchTree overrideOnEntityInteraction(Player player) {
-        return overrideGetResearchTree(player);
+        return getResearchTreeOverride(player);
     }
 
-    private static ResearchTree overrideGetResearchTree(Player player) {
+    /**
+     * Actually returns a working {@link iskallia.vault.research.ResearchTree}
+     * for fake players.
+     * @param player
+     * @return
+     */
+    private static ResearchTree getResearchTreeOverride(Player player) {
         if (!Configuration.FAKE_PLAYER_FIX.get() && player instanceof FakePlayer) {
+            VaultModTweaks.LOGGER.info(I18n.get("the_vault_tweaks.log.inject.research.fakeplayerfix", player.getUUID()));
             return ResearchTree.empty();
         }
         if (player.level.isClientSide) {

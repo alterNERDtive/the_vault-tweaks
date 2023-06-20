@@ -1,3 +1,20 @@
+/**
+ * Copyright 2023 alterNERDtive.
+ * 
+ * This file is part of Vault Mod Tweaks.
+ * 
+ * Vault Mod Tweaks is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * Vault Mod Tweaks is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with Vault Mod Tweaks.  If not, see <https://www.gnu.org/licenses/>.
+ */
 package tv.alterNERD.VaultModTweaks;
 
 import net.minecraftforge.common.ForgeConfigSpec;
@@ -28,6 +45,8 @@ public class Configuration {
 
     public static BooleanValue VAULTAR_ENABLED;
     public static IntValue VAULTAR_INFUSION_TIME;
+    
+    public static BooleanValue PORTAL_TEMPLATE_ENABLED;
     
     public static BooleanValue FAKE_PLAYER_FIX;
     public static BooleanValue ROUTER_VAULTAR_FIX;
@@ -97,6 +116,12 @@ public class Configuration {
         JUNKMGMT_T2 = builder.define("tier2Multiplier", 57);
         JUNKMGMT_T3 = builder.define("tier3Multiplier", 114);
         JUNKMGMT_T4 = builder.define("tier4Multiplier", 228);
+        builder.pop();
+
+        // Vault Portal
+        builder.push("VaultPortal");
+        builder.comment("Allow Template Frame Blocks extruded by Modular Routers’ Extruder Mk2 module as Vault Portal Frame blocks");
+        PORTAL_TEMPLATE_ENABLED = builder.define("allowTemplateFrames", true);
         builder.pop();
 
         // Bug fixes

@@ -1,4 +1,18 @@
 {
+    "the_vault_tweaks.log.inject.ae2research": "Injecting research for AE2 fake player …",
+    "the_vault_tweaks.log.inject.buddingcrystal": "Injecting Budding Crystal settings …",
+    "the_vault_tweaks.log.inject.expertise.fortunate": "Removing Fortunate expertise …",
+    "the_vault_tweaks.log.inject.expertise.jeweler": "Removing Jeweler expertise …",
+    "the_vault_tweaks.log.inject.fortune.level": "Injecting maximum Fortune level: %1$d …",
+    "the_vault_tweaks.log.inject.fortune.valid": "Overwriting validity check for Fortune …",
+    "the_vault_tweaks.log.inject.jewelcutting.failurechance": "Injecting jewel cutting failure chance: %1$.2f …",
+    "the_vault_tweaks.log.inject.jewelcutting.sizes": "Injecting jewel cutting size values: %1$d–%2$d …",
+    "the_vault_tweaks.log.inject.junkmgmt.upgrades": "Injecting Vault Junk Upgrade mulitpliers: %1$d, %2$d, %3$d, %4$d …",
+    "the_vault_tweaks.log.inject.relicfragments": "Balancing relic fragment weights …",
+    "the_vault_tweaks.log.inject.research.fakeplayerfix": "Returning valid research tree for fake player with UUID %1s …",
+    "the_vault_tweaks.log.inject.vaultar.infusion": "Injecting Vault Altar infusion time: %1$ds …",
+    "the_vault_tweaks.log.inject.vaultar.rock": "Injecting fake player interaction with Vault Altar …",
+
     "block.minecraft.andesite": "Andesite",
     "block.minecraft.polished_andesite": "Polished Andesite",
     "block.minecraft.andesite_stairs": "Andesite Stairs",

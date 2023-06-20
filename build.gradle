@@ -35,7 +35,7 @@ versioning {
     //saveOn "<task-name>"
 }
 
-version = '1.18.2-' + versioning.name + '.' + versioning.build
+version = "1.18.2-${versioning.name}.${versioning.build}"
 group = 'tv.alternerd.vault_tweaks' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'the_vault-tweaks'
 
@@ -161,9 +161,18 @@ repositories {
     // ForgeGradle automatically adds the Forge maven and Maven Central for you
 
     maven {
+        name "Cursemaven"
         url "https://cursemaven.com"
         content {
             includeGroup "curse.maven"
+        }
+    }
+
+    maven {
+        name = "Modmaven"
+        url = uri("https://modmaven.dev/")
+        content {
+            includeGroup "appeng"
         }
     }
 
@@ -182,6 +191,7 @@ dependencies {
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
     implementation fg.deobf('curse.maven:vault-hunters-official-mod-458203:4570130')
+    implementation fg.deobf('appeng:appliedenergistics2-forge:11.7.4')
 
     // Vault dependency
     implementation fg.deobf("curse.maven:curios-309927:4418032")
@@ -242,7 +252,26 @@ tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
 }
 
+javadoc {
+    options.encoding = 'UTF-8'
+}
+
 mixin {
     add sourceSets.main, 'mixins.the_vault_tweaks.refmap.json'
     config 'mixins.the_vault_tweaks.json'
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
 }
