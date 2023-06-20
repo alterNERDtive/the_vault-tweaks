@@ -16,8 +16,15 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v3
 
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+
+      - name: Run build with Gradle Wrapper
+        run: ./gradlew build
+
       - name: Draft release
         uses: ncipollo/release-action@v1
         with:
+          artifacts: "build/libs/the_vault-tweaks-1.18.2-*.jar"
           bodyFile: "CHANGELOG.md"
           draft: true
