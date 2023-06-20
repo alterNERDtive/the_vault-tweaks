@@ -3,11 +3,13 @@ buildscript {
         // These repositories are only for Gradle plugins, put any other repositories in the repository block further below
         maven { url = 'https://maven.minecraftforge.net' }
         maven { url = 'https://repo.spongepowered.org/maven' }
+        maven { url = "https://plugins.gradle.org/m2/" }
         mavenCentral()
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
         classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
+        classpath "eu.davidea:grabver:2.0.2"
     }
 }
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
@@ -17,8 +19,23 @@ plugins {
 }
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.spongepowered.mixin'
+apply plugin: 'eu.davidea.grabver'
 
-version = '1.18.2-3.10.1.1+devel'
+versioning {
+    // Required (number)
+    major 3
+    minor 10
+    // Optional, force custom patch (number)
+    patch 1
+    // Optional (any string)
+    //preRelease "RC1"
+    // Optional, custom task name to trigger the increase of the version
+    //incrementOn "<task-name>"
+    // Optional, custom task name for which you want to save the versioning file
+    //saveOn "<task-name>"
+}
+
+version = '1.18.2-' + versioning.name + '.' + versioning.build
 group = 'tv.alternerd.vault_tweaks' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'the_vault-tweaks'
 
