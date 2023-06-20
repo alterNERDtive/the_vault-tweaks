@@ -39,8 +39,6 @@ public class Configuration {
     public static ConfigValue<Integer> JUNKMGMT_T3;
     public static ConfigValue<Integer> JUNKMGMT_T4;
 
-    public static BooleanValue COLOURLESS;
-
     static {
         Builder builder = new Builder();
 
@@ -114,12 +112,6 @@ public class Configuration {
         CONFIG = builder.build();
 
         builder = new Builder();
-        
-        // Bug fixes
-        builder.push("Fixes");
-        builder.comment("Fix performance issues when determining item colours (WARNING: will make jewels and unidentified gear go white)");
-        COLOURLESS = builder.define("colourPerformanceFix", true);
-        builder.pop();
 
         CLIENTCONFIG = builder.build();
     }

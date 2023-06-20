@@ -11,9 +11,9 @@ expertise reset after installing this mod.
 ## Fixes
 
 * Removed the “Andersite” “joke”.
-* Removed call to a colour handling event that is called several thousand times 
+* ~~Removed call to a colour handling event that is called several thousand times 
   per second; gives a noticeable performance boost, but turns jewels and 
-  unidentified items white
+  unidentified items white~~ use <https://github.com/radimous/FastVaultGear>
 * Fake players work with research again (e.g. Routers + Botany Pots, AE2 auto 
   crafting)
 * Fake players can put Vault Rocks on the Altar again

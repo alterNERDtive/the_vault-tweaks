@@ -4,7 +4,6 @@
     "compatibilityLevel": "JAVA_17",
     "refmap": "mixins.the_vault_tweaks.refmap.json",
     "mixins": [
-        "MixinClientInitEvents",
         "MixinCrystalBuddingConfig",
         "MixinEnchantmentEntry",
         "MixinExpertisesGuiConfig",
