@@ -6,6 +6,7 @@
     "refmap": "mixins.the_vault_tweaks.refmap.json",
     "mixins": [
         "MixinCrystalBuddingConfig",
+        "MixinEnchantmentCost",
         "MixinEnchantmentEntry",
         "MixinExpertisesGuiConfig",
         "MixinPlayerResearchesData",

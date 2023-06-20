@@ -1,5 +1,6 @@
 # devel
 
+* Removed Emerald cost from Vault Enchanter.
 * Lots of refactoring work behind the scenes.
 * Added i18n support and lots of logging.
 * Fixed AE2 fake player in existing worlds not getting new research when it is added to the pack.

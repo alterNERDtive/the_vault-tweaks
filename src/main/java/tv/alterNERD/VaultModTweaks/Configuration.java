@@ -31,6 +31,8 @@ public class Configuration {
     public static BooleanValue FORTUNE_ENABLED;
     public static IntValue FORTUNE_LEVEL;
 
+    public static BooleanValue ENCHANTS_FORFREE;
+
     public static BooleanValue JEWELER_ENABLED;
     public static DoubleValue JEWELER_CHANCE;
 
@@ -67,6 +69,12 @@ public class Configuration {
         FORTUNE_ENABLED = builder.define("enableOverride", true);
         builder.comment("Maximum Fortune level");
         FORTUNE_LEVEL = builder.defineInRange("maxLevel", 5, 3, 5);
+        builder.pop();
+
+        // Enchantment Cost
+        builder.push("VaultEnchanter");
+        builder.comment("Remove the Emerald cost from the Vault Enchanter");
+        ENCHANTS_FORFREE = builder.define("removeEmeraldCost", true);
         builder.pop();
 
         // Jeweler
