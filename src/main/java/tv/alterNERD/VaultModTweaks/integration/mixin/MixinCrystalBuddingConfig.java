@@ -9,10 +9,10 @@ import tv.alterNERD.VaultModTweaks.Configuration;
 
 @Mixin(CrystalBuddingConfig.class)
 public abstract class MixinCrystalBuddingConfig extends Config {
-    @Shadow
+    @Shadow(remap = false)
     private float maxSecondsBetweenGrowthUpdates;
 
-    @Shadow
+    @Shadow(remap = false)
     private float minSecondsBetweenGrowthUpdates;
 
     @Override
@@ -24,13 +24,13 @@ public abstract class MixinCrystalBuddingConfig extends Config {
         }
     }
 
-    @Shadow
+    @Shadow(remap = false)
     @Override
     public String getName() {
         throw new UnsupportedOperationException("Unimplemented method 'getName'");
     }
 
-    @Shadow
+    @Shadow(remap = false)
     @Override
     protected void reset() {
         throw new UnsupportedOperationException("Unimplemented method 'reset'");

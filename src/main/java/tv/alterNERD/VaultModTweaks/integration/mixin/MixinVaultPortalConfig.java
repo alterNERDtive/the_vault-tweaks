@@ -13,7 +13,7 @@ import iskallia.vault.config.VaultPortalConfig;
 
 @Mixin(VaultPortalConfig.class)
 public abstract class MixinVaultPortalConfig extends Config {
-    @Shadow
+    @Shadow(remap = false)
     @Expose
     public String[] VALID_BLOCKS;
 
@@ -25,13 +25,13 @@ public abstract class MixinVaultPortalConfig extends Config {
         VALID_BLOCKS = list.toArray(VALID_BLOCKS);
     }
 
-    @Shadow
+    @Shadow(remap = false)
     @Override
     public String getName() {
         throw new UnsupportedOperationException("Unimplemented method 'getName'");
     }
 
-    @Shadow
+    @Shadow(remap = false)
     @Override
     protected void reset() {
         throw new UnsupportedOperationException("Unimplemented method 'reset'");

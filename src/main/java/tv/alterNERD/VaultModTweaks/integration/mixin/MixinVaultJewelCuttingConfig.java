@@ -10,10 +10,10 @@ import tv.alterNERD.VaultModTweaks.Configuration;
 
 @Mixin(VaultJewelCuttingConfig.class)
 public abstract class MixinVaultJewelCuttingConfig extends Config {
-    @Shadow
+    @Shadow(remap = false)
     private float jewelCuttingModifierRemovalChance;
 
-    @Shadow
+    @Shadow(remap = false)
     private JewelCuttingRange jewelCuttingRange;
 
     @Override
@@ -25,13 +25,13 @@ public abstract class MixinVaultJewelCuttingConfig extends Config {
         }
     }
 
-    @Shadow
+    @Shadow(remap = false)
     @Override
     public String getName() {
         throw new UnsupportedOperationException("Unimplemented method 'getName'");
     }
 
-    @Shadow
+    @Shadow(remap = false)
     @Override
     protected void reset() {
         throw new UnsupportedOperationException("Unimplemented method 'reset'");

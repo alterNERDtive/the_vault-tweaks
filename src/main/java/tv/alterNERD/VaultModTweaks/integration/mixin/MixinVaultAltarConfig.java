@@ -11,7 +11,7 @@ import tv.alterNERD.VaultModTweaks.Configuration;
 
 @Mixin(VaultAltarConfig.class)
 public abstract class MixinVaultAltarConfig extends Config {
-    @Shadow
+    @Shadow(remap = false)
     @Expose
     public int INFUSION_TIME;
 
@@ -23,13 +23,13 @@ public abstract class MixinVaultAltarConfig extends Config {
         }
     }
 
-    @Shadow
+    @Shadow(remap = false)
     @Override
     public String getName() {
         throw new UnsupportedOperationException("Unimplemented method 'getName'");
     }
 
-    @Shadow
+    @Shadow(remap = false)
     @Override
     protected void reset() {
         throw new UnsupportedOperationException("Unimplemented method 'reset'");

@@ -15,7 +15,7 @@ import tv.alterNERD.VaultModTweaks.Configuration;
 
 @Mixin(StageManager.class)
 public abstract class MixinStageManager {
-    @Shadow
+    @Shadow(remap = false)
     public static ResearchTree RESEARCH_TREE;
 
     @Redirect(

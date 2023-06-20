@@ -22,7 +22,7 @@ import tv.alterNERD.VaultModTweaks.Configuration;
 
 @Mixin(VaultAltarBlock.class)
 public class MixinVaultAltarBlock {
-    @Shadow
+    @Shadow(remap = false)
     private VaultAltarTileEntity getAltarTileEntity(Level world, BlockPos pos) {
         throw new UnsupportedOperationException("Unimplemented method 'getAltarTileEntity'");
     }

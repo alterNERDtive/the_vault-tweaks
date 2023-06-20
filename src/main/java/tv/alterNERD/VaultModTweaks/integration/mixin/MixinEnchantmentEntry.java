@@ -11,11 +11,11 @@ import tv.alterNERD.VaultModTweaks.Configuration;
 @Mixin(EnchantmentEntry.class)
 public abstract class MixinEnchantmentEntry
  {
-    @Shadow
+    @Shadow(remap = false)
     private int level;
-    @Shadow
+    @Shadow(remap = false)
     private Enchantment enchantment;
-
+    
     @Overwrite(remap = false)
     public int getLevel() {
         if (Configuration.FORTUNE_ENABLED.get()) {

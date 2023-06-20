@@ -16,7 +16,7 @@ import tv.alterNERD.VaultModTweaks.Configuration;
 
 @Mixin(PlayerResearchesData.class)
 public class MixinPlayerResearchesData {
-    @Shadow
+    @Shadow(remap = false)
     private final Map<UUID, ResearchTree> playerMap = new HashMap<UUID, ResearchTree>();
 
     @Overwrite(remap = false)

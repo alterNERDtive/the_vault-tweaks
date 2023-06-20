@@ -11,7 +11,7 @@ import tv.alterNERD.VaultModTweaks.Configuration;
 
 @Mixin(UnidentifiedRelicFragmentsConfig.class)
 public abstract class MixinUnidentifiedRelicFragmentsConfig extends Config {
-    @Shadow
+    @Shadow(remap = false)
     private WeightedList<ResourceLocation> fragments;
 
     @Override
@@ -24,13 +24,13 @@ public abstract class MixinUnidentifiedRelicFragmentsConfig extends Config {
         }
     }
 
-    @Shadow
+    @Shadow(remap = false)
     @Override
     public String getName() {
         throw new UnsupportedOperationException("Unimplemented method 'getName'");
     }
 
-    @Shadow
+    @Shadow(remap = false)
     @Override
     protected void reset() {
         throw new UnsupportedOperationException("Unimplemented method 'reset'");
