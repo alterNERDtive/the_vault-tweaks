@@ -17,7 +17,6 @@
  */
 package tv.alterNERD.VaultModTweaks.integration.mixin;
 
-import java.util.LinkedList;
 import java.util.List;
 
 import org.spongepowered.asm.mixin.Mixin;
@@ -25,6 +24,8 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+import com.google.gson.JsonObject;
 
 import iskallia.vault.util.EnchantmentCost;
 import net.minecraft.world.item.ItemStack;
@@ -44,7 +45,8 @@ public class MixinEnchantmentCost {
     private List<ItemStack> items;
 
     /**
-     * Removes the Emerald cost from all Vault Enchanter enchantments.
+     * Removes the Emerald cost from all Vault Enchanter enchantments when
+     * creating a new configuration.
      * 
      * @param items
      * @param levels
@@ -58,7 +60,27 @@ public class MixinEnchantmentCost {
     private void initCallback(List<ItemStack> items, int levels, CallbackInfo ci) {
         if (Configuration.ENCHANTS_FORFREE.get()) {
             VaultModTweaks.LOGGER.info("the_vault_tweaks.log.inject.enchanter.forfree");
-            this.items = new LinkedList<ItemStack>();
+            this.items.clear();
         }
     }
+
+    /**
+     * Removes the Emerald cost from all Vault Enchanter enchantments when
+     * reading an existing JSON configuration.
+     * 
+     * @param json
+     * @param ci
+     */
+    @Inject(
+        method = "readJson",
+        at = @At("RETURN"),
+        remap = false
+    )
+    private void readJsonCallback(JsonObject json, CallbackInfo ci) {
+        if (Configuration.ENCHANTS_FORFREE.get()) {
+            VaultModTweaks.LOGGER.info("the_vault_tweaks.log.inject.enchanter.forfree");
+            this.items.clear();
+        }
+    }
+
 }
