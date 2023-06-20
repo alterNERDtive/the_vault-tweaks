@@ -143,10 +143,17 @@ repositories {
     // Put repositories for dependencies here
     // ForgeGradle automatically adds the Forge maven and Maven Central for you
 
-    // If you have mod jar dependencies in ./libs, you can declare them as a repository like so:
-    flatDir {
-        dir 'libs'
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
     }
+
+    // If you have mod jar dependencies in ./libs, you can declare them as a repository like so:
+    //flatDir {
+    //    dir 'libs'
+    //}
 }
 
 dependencies {
@@ -156,6 +163,16 @@ dependencies {
     minecraft 'net.minecraftforge:forge:1.18.2-40.2.9'
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+
+    implementation fg.deobf('curse.maven:vault-hunters-official-mod-458203:4570130')
+
+    // Vault dependency
+    implementation fg.deobf("curse.maven:curios-309927:4418032")
+
+    // util
+    implementation fg.deobf("curse.maven:lazydfu-433518:3209972")
+    implementation fg.deobf("curse.maven:modernfix-790626:4593891")
+    implementation fg.deobf("curse.maven:configured-457570:4462832")
 
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
@@ -168,7 +185,6 @@ dependencies {
     // For more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
-    implementation fg.deobf('iskallia.vault:the_vault:1.18.2-3.8.0.2246')
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
