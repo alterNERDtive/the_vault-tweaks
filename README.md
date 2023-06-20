@@ -17,6 +17,7 @@ If you do not disable the changes that affect expertises, I recommend a full exp
 
 ## Changes
 
+* Removed Emerald cost from Vault Enchanter.
 * Vault Enchanters offer Fortune 5, Fortunate expertise removed
 * Jewel cutting has a base 25% chance of failure, Jeweler expertise removed
 * Budding Crystal (Sky Vaults only) growth time reduced
