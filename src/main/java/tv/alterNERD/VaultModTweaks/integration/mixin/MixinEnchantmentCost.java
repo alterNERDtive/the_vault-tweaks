@@ -46,26 +46,6 @@ public class MixinEnchantmentCost {
 
     /**
      * Removes the Emerald cost from all Vault Enchanter enchantments when
-     * creating a new configuration.
-     * 
-     * @param items
-     * @param levels
-     * @param ci
-     */
-    @Inject(
-        method = "<init>(Ljava/util/List;I)V",
-        at = @At("RETURN"),
-        remap = false
-    )
-    private void initCallback(List<ItemStack> items, int levels, CallbackInfo ci) {
-        if (Configuration.ENCHANTS_FORFREE.get()) {
-            VaultModTweaks.LOGGER.info("the_vault_tweaks.log.inject.enchanter.forfree");
-            this.items.clear();
-        }
-    }
-
-    /**
-     * Removes the Emerald cost from all Vault Enchanter enchantments when
      * reading an existing JSON configuration.
      * 
      * @param json
