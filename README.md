@@ -8,12 +8,13 @@ If you do not disable the changes that affect expertises, I recommend a full exp
 
 ## Fixes
 
-* Removed the “Andersite” “joke”.
+* Removed the “Andersite” “joke”
 * ~~Removed call to a colour handling event that is called several thousand times per second; gives a noticeable performance boost, but turns jewels and unidentified items white~~ use <https://github.com/radimous/FastVaultGear>
 * Fake players work with research again (e.g. Routers + Botany Pots, AE2 auto crafting)
 * Fake players can put Vault Rocks on the Altar again
 * Relic fragments \#5 are now equally as likely to drop as the others
 * AE2 auto crafting no longer requires manually giving its fake player all research
+* Altar Conduit now draws the correct amount of power when connected to AE2
 
 ## Changes
 
