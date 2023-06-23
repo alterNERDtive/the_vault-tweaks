@@ -1,4 +1,4 @@
-# develop
+# 3.10.1.4 (2023-06-23)
 
 * Fixed Vault Altar Conduit energy usage when used in an AE2 grid.
 
