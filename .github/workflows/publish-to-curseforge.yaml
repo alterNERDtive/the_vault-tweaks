@@ -1,0 +1,43 @@
+﻿name: Publish to Curseforge on release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    name: Publish to Curseforge
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Set env
+        run: echo "RELEASE_VERSION=${GITHUB_REF_NAME#release/}" >> $GITHUB_ENV
+
+      - name: Download release artifacts
+        run: gh release download ${{ github.ref_name }}
+      
+      - name: Publish to Curseforge
+        uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          curseforge-id: 877136
+          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+
+          files: *.jar
+
+          name: ""
+          version: 1.18.2-${{ env.RELEASE_VERSION }}
+          version-type: release
+          changelog-file: CHANGELOG.md
+
+          loaders: |
+            forge
+          game-versions: |
+            1.18.2
+          java: |
+            17
+
+          retry-attempts: 2
+          retry-delay: 10000
+          fail-mode: fail
