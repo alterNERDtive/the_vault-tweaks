@@ -38,3 +38,10 @@ There are some bug fixes and a lot of QoL and balance changes. See https://git.a
     versionRange="[1.18.2-3.8.0.2246]"
     ordering="AFTER"
     side="BOTH"
+
+[[dependencies.the_vault_tweaks]]
+    modId="vaultintegrations"
+    mandatory=true
+    versionRange="[1.18.2-1.0.10]"
+    ordering="AFTER"
+    side="BOTH"
