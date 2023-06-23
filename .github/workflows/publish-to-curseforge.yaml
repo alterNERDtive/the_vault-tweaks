@@ -24,7 +24,8 @@ jobs:
           curseforge-id: 877136
           curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
 
-          files: *.jar
+          files: |
+            *.jar
 
           name: ""
           version: 1.18.2-${{ env.RELEASE_VERSION }}
