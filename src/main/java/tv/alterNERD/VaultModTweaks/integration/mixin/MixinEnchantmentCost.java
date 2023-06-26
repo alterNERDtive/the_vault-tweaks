@@ -31,6 +31,7 @@ import iskallia.vault.util.EnchantmentCost;
 import net.minecraft.world.item.ItemStack;
 import tv.alterNERD.VaultModTweaks.Configuration;
 import tv.alterNERD.VaultModTweaks.VaultModTweaks;
+import tv.alterNERD.VaultModTweaks.util.I18n;
 
 /**
  * Changes the {@link iskallia.vault.util.EnchantmentCost} class used by the
@@ -58,7 +59,7 @@ public class MixinEnchantmentCost {
     )
     private void readJsonCallback(JsonObject json, CallbackInfo ci) {
         if (Configuration.ENCHANTS_FORFREE.get()) {
-            VaultModTweaks.LOGGER.info("the_vault_tweaks.log.inject.enchanter.forfree");
+            VaultModTweaks.LOGGER.info(I18n.get("the_vault_tweaks.log.inject.enchanter.forfree"));
             this.items.clear();
         }
     }
