@@ -1,4 +1,4 @@
-# devel
+# 3.10.1.5 (2023-06-27)
 
 * Fixed `removeEmeraldCost` option not being applied correctly on servers (#2).
 * Added en_US strings for Clean/Dirty Chromatic Iron Slurry.
