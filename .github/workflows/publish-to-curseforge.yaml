@@ -16,6 +16,8 @@ jobs:
         run: echo "RELEASE_VERSION=${GITHUB_REF_NAME#release/}" >> $GITHUB_ENV
 
       - name: Download release artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: gh release download ${{ github.ref_name }}
       
       - name: Publish to Curseforge
