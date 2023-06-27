@@ -7,7 +7,6 @@
     "mixins": [
         "MixinAltarConduitNode",
         "MixinCrystalBuddingConfig",
-        "MixinEnchantmentCost",
         "MixinEnchantmentEntry",
         "MixinExpertisesGuiConfig",
         "MixinPlayerResearchesData",
@@ -16,6 +15,7 @@
         "MixinVaultAltarBlock",
         "MixinVaultAltarConfig",
         "MixinVaultCharmConfig",
+        "MixinVaultGearEnchantmentConfig",
         "MixinVaultJewelCuttingConfig",
         "MixinVaultPortalConfig"
     ],

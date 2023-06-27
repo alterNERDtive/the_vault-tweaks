@@ -23,44 +23,39 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import com.google.gson.JsonObject;
-
+import iskallia.vault.config.gear.VaultGearEnchantmentConfig;
 import iskallia.vault.util.EnchantmentCost;
-import net.minecraft.world.item.ItemStack;
+import iskallia.vault.util.EnchantmentEntry;
 import tv.alterNERD.VaultModTweaks.Configuration;
 import tv.alterNERD.VaultModTweaks.VaultModTweaks;
 import tv.alterNERD.VaultModTweaks.util.I18n;
 
 /**
- * Changes the {@link iskallia.vault.util.EnchantmentCost} class used by the
- * Vault Enchanter.
+ * Changes the {@link iskallia.vault.config.gear.VaultGearEnchantmentConfig}
+ * class used by the Vault Enchanter.
  * 
  * Specifically, it removes the Emerald cost of enchantments. Just because I
  * cannot be arsed to bring them over every time.
  */
-@Mixin(EnchantmentCost.class)
-public class MixinEnchantmentCost {
-    @Shadow(remap = false)
-    private List<ItemStack> items;
-
+@Mixin(VaultGearEnchantmentConfig.class)
+public class MixinVaultGearEnchantmentConfig {
     /**
-     * Removes the Emerald cost from all Vault Enchanter enchantments when
-     * reading an existing JSON configuration.
+     * Removes the Emerald cost from all Vault Enchanter enchantments.
      * 
-     * @param json
-     * @param ci
+     * @param entry
      */
     @Inject(
-        method = "readJson",
+        method = "getCost",
         at = @At("RETURN"),
+        cancellable = true,
         remap = false
     )
-    private void readJsonCallback(JsonObject json, CallbackInfo ci) {
+    private void readJsonCallback(EnchantmentEntry enrty, CallbackInfoReturnable<EnchantmentCost> ci) {
         if (Configuration.ENCHANTS_FORFREE.get()) {
             VaultModTweaks.LOGGER.info(I18n.get("the_vault_tweaks.log.inject.enchanter.forfree"));
-            this.items.clear();
+            ci.setReturnValue(EnchantmentCost.EMPTY);
         }
     }
 
