@@ -3,6 +3,7 @@
 # 3.10.1.4 (2023-06-23)
 
 * Fixed Vault Altar Conduit energy usage when used in an AE2 grid.
+* Fixed `removeEmeraldCost` option not being applied correctly on servers (#2).
 * Added en_US strings for Clean/Dirty Chromatic Iron Slurry.
 
 # 3.10.1.3 (2023-06-21)
