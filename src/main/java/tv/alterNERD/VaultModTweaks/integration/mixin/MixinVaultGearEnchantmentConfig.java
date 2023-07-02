@@ -17,10 +17,7 @@
  */
 package tv.alterNERD.VaultModTweaks.integration.mixin;
 
-import java.util.List;
-
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
@@ -52,7 +49,7 @@ public class MixinVaultGearEnchantmentConfig {
         cancellable = true,
         remap = false
     )
-    private void readJsonCallback(EnchantmentEntry enrty, CallbackInfoReturnable<EnchantmentCost> ci) {
+    private void readJsonCallback(EnchantmentEntry entry, CallbackInfoReturnable<EnchantmentCost> ci) {
         if (Configuration.ENCHANTS_FORFREE.get()) {
             VaultModTweaks.LOGGER.info(I18n.get("the_vault_tweaks.log.inject.enchanter.forfree"));
             ci.setReturnValue(EnchantmentCost.EMPTY);
