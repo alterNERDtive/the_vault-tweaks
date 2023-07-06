@@ -11,6 +11,7 @@
         "MixinExpertisesGuiConfig",
         "MixinPlayerResearchesData",
         "MixinStageManager",
+        "MixinToolType",
         "MixinUnidentifiedRelicFragmentsConfig",
         "MixinVaultAltarBlock",
         "MixinVaultAltarConfig",

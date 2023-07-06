@@ -1,6 +1,6 @@
 # devel
 
-* 
+* Added support for Reaping Jewels (you still cannot obtain those without commands or config changes!).
 
 # 3.10.1.5 (2023-06-27)
 
