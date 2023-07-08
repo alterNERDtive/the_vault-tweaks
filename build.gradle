@@ -261,6 +261,8 @@ javadoc {
 mixin {
     add sourceSets.main, 'mixins.the_vault_tweaks.refmap.json'
     config 'mixins.the_vault_tweaks.json'
+    // AP settings
+    disableOverwriteChecker = true
 }
 
 task sourcesJar(type: Jar, dependsOn: classes) {
