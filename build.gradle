@@ -24,9 +24,9 @@ apply plugin: 'eu.davidea.grabver'
 versioning {
     // Required (number)
     major 3
-    minor 10
+    minor 11
     // Optional, force custom patch (number)
-    patch 1
+    // patch 1
     // Optional (any string)
     //preRelease "RC1"
     // Optional, custom task name to trigger the increase of the version
@@ -190,13 +190,15 @@ dependencies {
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
-    implementation fg.deobf('curse.maven:vault-hunters-official-mod-458203:4570130')
+    implementation fg.deobf('curse.maven:vault-hunters-official-mod-458203:4641723')
     implementation fg.deobf('curse.maven:vault-integrations-867003:4570137')
     implementation fg.deobf("curse.maven:refined-storage-243076:3712882")
     implementation fg.deobf('appeng:appliedenergistics2-forge:11.7.0')
 
     // Vault dependency
     implementation fg.deobf("curse.maven:curios-309927:4418032")
+    implementation fg.deobf("curse.maven:quark-243121:3840125")
+    implementation fg.deobf("curse.maven:autoreglib-250363:3642382")
 
     // util
     implementation fg.deobf("curse.maven:lazydfu-433518:3209972")
