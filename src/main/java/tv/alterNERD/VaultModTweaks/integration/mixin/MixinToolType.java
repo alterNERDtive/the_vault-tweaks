@@ -38,7 +38,7 @@ public abstract class MixinToolType {
      * 
      * @return nothing; this should never be actually called
      */
-    @Accessor
+    @Accessor(remap = false)
     static Map<Integer, ToolType> getPACKED_TO_TYPE() {
         throw new AssertionError();
     }
