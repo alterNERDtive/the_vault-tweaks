@@ -1,6 +1,6 @@
 # devel
 
-
+* Removed the Altar Conduit fix toggle from the configuration file.
 
 # 3.11.0.2 (2023-07-13)
 

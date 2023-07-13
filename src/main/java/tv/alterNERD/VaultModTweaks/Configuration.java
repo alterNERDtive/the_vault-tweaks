@@ -53,7 +53,6 @@ public class Configuration {
     public static BooleanValue FAKE_PLAYER_FIX;
     public static BooleanValue ROUTER_VAULTAR_FIX;
     public static BooleanValue FRAGMENT_WEIGHT_FIX;
-    public static BooleanValue VAULTAR_CONDUIT_FIX;
     
     public static BooleanValue JUNKMGMT_ENABLED;
     public static ConfigValue<Integer> JUNKMGMT_T1;
@@ -141,8 +140,6 @@ public class Configuration {
         ROUTER_VAULTAR_FIX = builder.define("routerVaultarFix", true);
         builder.comment("Fix №5 fragments of all relics having half the weight");
         FRAGMENT_WEIGHT_FIX = builder.define("fragmentFix", true);
-        builder.comment("Fix Vaultar Conduit power usage when used in an AE2 grid");
-        VAULTAR_CONDUIT_FIX = builder.define("conduitEnergyFix", true);
         builder.pop();
 
         CONFIG = builder.build();
