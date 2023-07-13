@@ -30,7 +30,9 @@ jobs:
           curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
 
           files: |
-            *.jar
+            the_vault-tweaks-1.18.2-${{ env.RELEASE_VERSION }}.jar
+            the_vault-tweaks-1.18.2-${{ env.RELEASE_VERSION }}-javadoc.jar
+            the_vault-tweaks-1.18.2-${{ env.RELEASE_VERSION }}-sources.jar
 
           name: ""
           version: 1.18.2-${{ env.RELEASE_VERSION }}
