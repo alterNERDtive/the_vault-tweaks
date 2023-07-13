@@ -1,4 +1,4 @@
-# devel
+# 3.11.0.2 (2023-07-13)
 
 * Removed Altar Conduit power draw fix for AE2, fixed in the mod itself.
 * Fixed (= removed) Vault Integrations dependency.
