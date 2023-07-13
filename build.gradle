@@ -191,8 +191,8 @@ dependencies {
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
     implementation fg.deobf('curse.maven:vault-hunters-official-mod-458203:4641723')
-    implementation fg.deobf('curse.maven:vault-integrations-867003:4570137')
-    implementation fg.deobf("curse.maven:refined-storage-243076:3712882")
+    // implementation fg.deobf('curse.maven:vault-integrations-867003:4570137')
+    // implementation fg.deobf("curse.maven:refined-storage-243076:3712882")
     implementation fg.deobf('appeng:appliedenergistics2-forge:11.7.0')
 
     // Vault dependency

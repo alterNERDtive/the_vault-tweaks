@@ -21,7 +21,6 @@ The mod is configured via a server configuration file. To change settings, do th
 * Fake players can put Vault Rocks on the Altar again.
 * Relic fragments \#5 are now equally as likely to drop as the others.
 * AE2 auto crafting no longer requires manually giving its fake player all research.
-* Altar Conduit now draws the correct amount of power when connected to AE2.
 
 ## Balance Changes
 
