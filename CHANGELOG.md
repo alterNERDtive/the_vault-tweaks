@@ -1,5 +1,6 @@
-# devel
+# 3.11.0.1 (2023-07-13)
 
+* Updated dependencies for Vault Hunters 3.11.
 * Added support for Reaping Jewels (you still cannot obtain those without commands or config changes!).
 
 # 3.10.1.5 (2023-06-27)
