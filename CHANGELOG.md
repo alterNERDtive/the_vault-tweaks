@@ -1,5 +1,6 @@
-# devel
+# 3.11.0.3 (2023-07-13)
 
+* Re-release because Curse sucks.
 * Removed the Altar Conduit fix toggle from the configuration file.
 
 # 3.11.0.2 (2023-07-13)
