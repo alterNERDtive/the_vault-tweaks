@@ -6,17 +6,24 @@ All of these can be individually disabled in client & server config files.
 
 If you do not disable the changes that affect expertises, I recommend a full expertise reset after installing this mod.
 
-## Fixes
+## Configuration
 
-* Removed the “Andersite” “joke”.
-* ~~Removed call to a colour handling event that is called several thousand times per second; gives a noticeable performance boost, but turns jewels and unidentified items white~~ use <https://github.com/radimous/FastVaultGear>.
+The mod is configured via a server configuration file. To change settings, do the following:
+
+1. Create a new world and load into it / start your server.
+2. Close the world again / stop your server.
+3. Find the configuration file in `saves/<world name>/the_vault-tweaks-server.toml` (singleplayer) or `<world name>/the_vault-tweaks-server.toml` (server).
+4. Change accordingly. The file is heavily commented.
+
+## Bug Fixes
+
 * Fake players work with research again (e.g. Routers + Botany Pots, AE2 auto crafting).
 * Fake players can put Vault Rocks on the Altar again.
 * Relic fragments \#5 are now equally as likely to drop as the others.
 * AE2 auto crafting no longer requires manually giving its fake player all research.
 * Altar Conduit now draws the correct amount of power when connected to AE2.
 
-## Changes
+## Balance Changes
 
 * Removed Emerald cost from Vault Enchanter.
 * Vault Enchanters offer Fortune 5, Fortunate expertise removed.
