@@ -17,6 +17,9 @@
  */
 package tv.alterNERD.VaultModTweaks;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.ForgeConfigSpec.BooleanValue;
 import net.minecraftforge.common.ForgeConfigSpec.DoubleValue;
@@ -59,6 +62,9 @@ public class Configuration {
     public static ConfigValue<Integer> JUNKMGMT_T2;
     public static ConfigValue<Integer> JUNKMGMT_T3;
     public static ConfigValue<Integer> JUNKMGMT_T4;
+
+    public static ConfigValue<List<? extends String>> GOBLINS;
+    public static ConfigValue<List<? extends String>> CHAMPIONS;
 
     static {
         Builder builder = new Builder();
@@ -140,6 +146,14 @@ public class Configuration {
         ROUTER_VAULTAR_FIX = builder.define("routerVaultarFix", true);
         builder.comment("Fix №5 fragments of all relics having half the weight");
         FRAGMENT_WEIGHT_FIX = builder.define("fragmentFix", true);
+        builder.pop();
+
+        // Transmogs
+        builder.push("Transmogs");
+        GOBLINS = builder.comment("Additional “Goblin” tier Patrons")
+            .defineList("goblins", new ArrayList<String>(), entry -> true);
+        CHAMPIONS = builder.comment("Additional “Champion” tier Patrons")
+            .defineList("champions", new ArrayList<String>(), entry -> true);
         builder.pop();
 
         CONFIG = builder.build();
