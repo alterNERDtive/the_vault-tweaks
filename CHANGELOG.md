@@ -1,6 +1,6 @@
 # devel
 
-
+* Updated for Vault Hunters 3.11.1.
 
 # 3.11.0.3 (2023-07-13)
 
