@@ -73,7 +73,7 @@ public class Configuration {
         builder.push("Fortune");
         FORTUNE_ENABLED = builder
             .comment("Replace the maximum Fortune level for the Vault Enchanter and remove the Fortunate Expertise")
-            .define("enableOverride", true);
+            .define("enableOverride", false);
         FORTUNE_LEVEL = builder
             .comment("Maximum Fortune level")
             .defineInRange("maxLevel", 5, 3, 5);
@@ -83,14 +83,14 @@ public class Configuration {
         builder.push("VaultEnchanter");
         ENCHANTS_FORFREE = builder
             .comment("Remove the Emerald cost from the Vault Enchanter")
-            .define("removeEmeraldCost", true);
+            .define("removeEmeraldCost", false);
         builder.pop();
 
         // Jeweler
         builder.push("Jeweler");
         JEWELER_ENABLED = builder
             .comment("Remove the Jeweler Expertise and change the default cutting chance accordingly")
-            .define("disableJeweler", true);
+            .define("disableJeweler", false);
         JEWELER_CHANCE = builder
             .comment("Chance to break the jewel / remove a modifier")
             .defineInRange("breakChance", 0.25d, 0d, 0.5d);
@@ -100,7 +100,7 @@ public class Configuration {
         builder.push("BuddingCrystal");
         BUDDING_ENABLED = builder
             .comment("Change the Budding Crystal growth times (Sky Vaults only)")
-            .define("enableOverride", true);
+            .define("enableOverride", false);
         BUDDING_MAX = builder
             .comment("Maximum time between growth stages (pack default: 400)")
             .defineInRange("maxTime", 300, 300, 500);
@@ -113,7 +113,7 @@ public class Configuration {
         builder.push("Jewels");
         JEWELS_ENABLED = builder
             .comment("Change the max size for jewels and the size range for jewel cutting")
-            .define("enableOverride", true);
+            .define("enableOverride", false);
         JEWELS_SIZE = builder
             .comment("Maximum Jewel size (pack default: 90) (CURRENTLY NON-FUNCTIONAL)")
             .defineInRange("maxSize", 40, 10, 100);
@@ -129,7 +129,7 @@ public class Configuration {
         builder.push("VaultAltar");
         VAULTAR_ENABLED = builder
             .comment("Enable Vaultar config overrides")
-            .define("enableOverride", true);
+            .define("enableOverride", false);
         VAULTAR_INFUSION_TIME = builder
             .comment("The time it takes to infuse a crystal after giving a redstone signal (pack default: 5)")
             .defineInRange("infusionTime", 1, 1, 10);
@@ -139,7 +139,7 @@ public class Configuration {
         builder.push("JunkManagement");
         JUNKMGMT_ENABLED = builder
             .comment("Override Junk Charm multipliers for the Junk Management slots (pack defaults: 3/18/114/228)")
-            .define("enableOverride", true);
+            .define("enableOverride", false);
         builder.comment("These values will be multiplied by the default junk list size (9)");
         JUNKMGMT_T1 = builder.define("tier1Multiplier", 28);
         JUNKMGMT_T2 = builder.define("tier2Multiplier", 57);
@@ -151,7 +151,7 @@ public class Configuration {
         builder.push("VaultPortal");
         PORTAL_TEMPLATE_ENABLED = builder
             .comment("Allow Template Frame Blocks extruded by Modular Routers’ Extruder Mk2 module as Vault Portal Frame blocks")
-            .define("allowTemplateFrames", true);
+            .define("allowTemplateFrames", false);
         builder.pop();
 
         // Bug fixes

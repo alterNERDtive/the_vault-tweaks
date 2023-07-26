@@ -1,6 +1,6 @@
 # devel
 
-
+* Balance changes are now disabled by default, bug fixes enabled. Will not affect exsting worlds/configs.
 
 # 3.11.1.0 (2023-07-25)
 
