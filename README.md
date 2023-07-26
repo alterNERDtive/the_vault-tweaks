@@ -24,7 +24,7 @@ The mod is configured via a server configuration file. To change settings, do th
 
 ## Balance Changes
 
-* Removed Emerald cost from Vault Enchanter.
+* Removed enchanting cost from Vault Enchanter.
 * Vault Enchanters offer Fortune 5, Fortunate expertise removed.
 * Jewel cutting has a base 25% chance of failure, Jeweler expertise removed.
 * Budding Crystal (Sky Vaults only) growth time reduced.

@@ -33,13 +33,13 @@ import tv.alterNERD.VaultModTweaks.util.I18n;
  * Changes the {@link iskallia.vault.config.gear.VaultGearEnchantmentConfig}
  * class used by the Vault Enchanter.
  * 
- * Specifically, it removes the Emerald cost of enchantments. Just because I
- * cannot be arsed to bring them over every time.
+ * Specifically, it removes the cost of enchantments. Just because I cannot be
+ * arsed to bring Emeralds over every time.
  */
 @Mixin(VaultGearEnchantmentConfig.class)
 public class MixinVaultGearEnchantmentConfig {
     /**
-     * Removes the Emerald cost from all Vault Enchanter enchantments.
+     * Removes the cost from all Vault Enchanter enchantments.
      * 
      * @param entry
      */
