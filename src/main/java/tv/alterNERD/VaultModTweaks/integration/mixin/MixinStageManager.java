@@ -103,13 +103,19 @@ public abstract class MixinStageManager {
      * @return
      */
     private static ResearchTree getResearchTreeOverride(Player player) {
-        if (!Configuration.FAKE_PLAYER_FIX.get() && player instanceof FakePlayer) {
-            VaultModTweaks.LOGGER.info(I18n.get("the_vault_tweaks.log.inject.research.fakeplayerfix", player.getUUID()));
-            return ResearchTree.empty();
+        ResearchTree tree = ResearchTree.empty();
+        if (player instanceof FakePlayer) {
+            if (Configuration.FAKE_PLAYER_FIX.get()) {
+                VaultModTweaks.LOGGER.info(I18n.get("the_vault_tweaks.log.inject.research.fakeplayerfix", player.getUUID()));
+                tree = PlayerResearchesData.get((ServerLevel) player.level).getResearches(player);
+            }
         }
-        if (player.level.isClientSide) {
-            return RESEARCH_TREE;
+        else if (player.level.isClientSide) {
+            tree = RESEARCH_TREE;
         }
-        return PlayerResearchesData.get((ServerLevel)player.level).getResearches(player);
+        else {
+            tree = PlayerResearchesData.get((ServerLevel)player.level).getResearches(player);
+        }
+        return tree;
     }
 }
