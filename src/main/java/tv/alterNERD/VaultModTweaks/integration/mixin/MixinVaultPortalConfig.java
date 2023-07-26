@@ -51,9 +51,11 @@ public abstract class MixinVaultPortalConfig extends Config {
     @Override
     protected void onLoad(Config oldConfigInstance) {
         super.onLoad(oldConfigInstance);
-        if (Configuration.PORTAL_TEMPLATE_ENABLED.get()) {
+        if (Configuration.PORTAL_BLOCKS_ENABLED.get()) {
             ArrayList<String> list = new ArrayList<String>(Arrays.asList(VALID_BLOCKS));
-            list.add("modularrouters:template_frame");
+            for (String block : Configuration.PORTAL_BLOCKS.get()) {
+                list.add(block);
+            }
             VALID_BLOCKS = list.toArray(VALID_BLOCKS);
         }
     }

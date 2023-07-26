@@ -1,6 +1,7 @@
 # devel
 
 * Balance changes are now disabled by default, bug fixes enabled. Will not affect exsting worlds/configs.
+* Modularized Portal block configuration; you can now define your own blocks to build Vault Portals out of.
 
 # 3.11.1.0 (2023-07-25)
 

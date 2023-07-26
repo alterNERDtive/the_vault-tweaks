@@ -18,12 +18,15 @@
 package tv.alterNERD.VaultModTweaks;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.ForgeConfigSpec.BooleanValue;
 import net.minecraftforge.common.ForgeConfigSpec.DoubleValue;
 import net.minecraftforge.common.ForgeConfigSpec.IntValue;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.common.ForgeConfigSpec.Builder;
 import net.minecraftforge.common.ForgeConfigSpec.ConfigValue;
 
@@ -51,7 +54,8 @@ public class Configuration {
     public static BooleanValue VAULTAR_ENABLED;
     public static IntValue VAULTAR_INFUSION_TIME;
     
-    public static BooleanValue PORTAL_TEMPLATE_ENABLED;
+    public static BooleanValue PORTAL_BLOCKS_ENABLED;
+    public static ConfigValue<List<? extends String>> PORTAL_BLOCKS;
     
     public static BooleanValue FAKE_PLAYER_FIX;
     public static BooleanValue ROUTER_VAULTAR_FIX;
@@ -149,9 +153,14 @@ public class Configuration {
 
         // Vault Portal
         builder.push("VaultPortal");
-        PORTAL_TEMPLATE_ENABLED = builder
-            .comment("Allow Template Frame Blocks extruded by Modular Routers’ Extruder Mk2 module as Vault Portal Frame blocks")
-            .define("allowTemplateFrames", false);
+        PORTAL_BLOCKS_ENABLED = builder
+            .comment("Add additional blocks as valid Portal frame blocks")
+            .define("extendValidPortalBlocks", false);
+        PORTAL_BLOCKS = builder
+            .comment("List of additional blocks")
+            .defineList("additionalPortalBlocks", new ArrayList<String>(), entry -> {
+                return ForgeRegistries.BLOCKS.containsKey(new ResourceLocation((String)entry));
+            });
         builder.pop();
 
         // Bug fixes
