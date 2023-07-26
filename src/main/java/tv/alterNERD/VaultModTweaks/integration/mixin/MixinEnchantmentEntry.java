@@ -39,7 +39,7 @@ import tv.alterNERD.VaultModTweaks.util.I18n;
  */
 @Mixin(EnchantmentEntry.class)
 public abstract class MixinEnchantmentEntry
- {
+{
     @Shadow(remap = false)
     private int level;
     @Shadow(remap = false)

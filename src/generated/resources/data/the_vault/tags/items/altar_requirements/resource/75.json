@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:blue_ice",
+    "minecraft:crimson_stem",
+    "minecraft:warped_stem",
+    "minecraft:crying_obsidian",
+    "minecraft:calcite",
+    "minecraft:rooted_dirt"
+  ]
+}

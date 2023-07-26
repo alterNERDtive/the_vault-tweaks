@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:pointed_dripstone",
+    "minecraft:gold_ingot",
+    "minecraft:iron_ingot",
+    "minecraft:redstone",
+    "minecraft:emerald",
+    "minecraft:lapis_lazuli",
+    "minecraft:copper_ingot",
+    "minecraft:coal",
+    "minecraft:charcoal"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:honey_bottle",
+    "minecraft:blaze_rod",
+    "minecraft:ender_pearl",
+    "minecraft:rabbit_foot",
+    "minecraft:honeycomb",
+    "minecraft:ink_sac",
+    "minecraft:glow_ink_sac",
+    "minecraft:pufferfish"
+  ]
+}

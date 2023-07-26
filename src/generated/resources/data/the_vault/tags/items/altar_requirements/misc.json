@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "#the_vault:altar_requirements/misc/0",
+    "#the_vault:altar_requirements/misc/10",
+    "#the_vault:altar_requirements/misc/20",
+    "#the_vault:altar_requirements/misc/40",
+    "#the_vault:altar_requirements/misc/75",
+    "#the_vault:altar_requirements/misc/90"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:kelp",
+    "minecraft:cactus",
+    "minecraft:bamboo",
+    "minecraft:vine",
+    "minecraft:beetroot",
+    "minecraft:snowball",
+    "minecraft:pumpkin",
+    "minecraft:melon",
+    "minecraft:azalea",
+    "minecraft:flowering_azalea",
+    "minecraft:sea_pickle",
+    "minecraft:dandelion",
+    "minecraft:poppy",
+    "minecraft:blue_orchid",
+    "minecraft:allium",
+    "minecraft:azure_bluet",
+    "minecraft:oxeye_daisy",
+    "minecraft:cornflower",
+    "minecraft:lily_of_the_valley",
+    "minecraft:beetroot_seeds",
+    "minecraft:sweet_berries",
+    "minecraft:apple",
+    "minecraft:seagrass"
+  ]
+}

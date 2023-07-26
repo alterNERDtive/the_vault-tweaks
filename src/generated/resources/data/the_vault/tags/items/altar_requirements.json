@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#the_vault:altar_requirements/mob",
+    "#the_vault:altar_requirements/resource",
+    "#the_vault:altar_requirements/farmable",
+    "#the_vault:altar_requirements/misc"
+  ]
+}

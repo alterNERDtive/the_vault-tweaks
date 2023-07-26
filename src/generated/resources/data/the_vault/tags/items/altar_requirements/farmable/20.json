@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:brown_mushroom",
+    "minecraft:red_mushroom",
+    "minecraft:red_tulip",
+    "minecraft:orange_tulip",
+    "minecraft:white_tulip",
+    "minecraft:pink_tulip",
+    "minecraft:sunflower",
+    "minecraft:rose_bush",
+    "minecraft:peony",
+    "minecraft:lilac",
+    "minecraft:glow_lichen",
+    "minecraft:clay_ball",
+    "minecraft:brick",
+    "minecraft:glow_berries",
+    "minecraft:nether_wart"
+  ]
+}

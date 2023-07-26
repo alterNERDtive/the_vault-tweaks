@@ -2,9 +2,9 @@
 
 This little companion mod for the Vault mod of the Vault Hunters mod pack fixes a few bugs and brings a couple QoL and balance changes.
 
-All of these can be individually disabled in client & server config files.
+All of these can be individually toggled and configured in a server config file. Bug fixes are enabled, balance changes disabled by default.
 
-If you do not disable the changes that affect expertises, I recommend a full expertise reset after installing this mod.
+If you enable the changes that affect expertises, I recommend a full expertise reset after installing this mod.
 
 ## Configuration
 
@@ -21,6 +21,15 @@ The mod is configured via a server configuration file. To change settings, do th
 * Fake players can put Vault Rocks on the Altar again.
 * Relic fragments \#5 are now equally as likely to drop as the others.
 * AE2 auto crafting no longer requires manually giving its fake player all research.
+
+## Miscellaneous
+
+* Added support for making Vault Portals out of arbitrary blocks.
+* Added tags to all Vault Altar requirements:
+  * `the_vault:altar_requirements`
+  * `the_vault:altar_requirements/<level>`
+  * `the_vault:altar_requirements/<pool>`
+  * `the_vault:altar_requirements/<pool>/<level>`
 
 ## Balance Changes
 

@@ -21,26 +21,42 @@ import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
+import net.minecraft.data.DataProvider;
+import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
+import tv.alterNERD.VaultModTweaks.integration.TagManager;
 
 @Mod("the_vault_tweaks")
 public class VaultModTweaks
 {
     public static final Logger LOGGER = LogUtils.getLogger();
+    public static final String MOD_ID = "the_vault_tweaks";
 
-    public VaultModTweaks()
-    {
+    public VaultModTweaks() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::gatherData);
         ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, Configuration.CONFIG);
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, Configuration.CLIENTCONFIG);
     }
 
-    private void setup(final FMLCommonSetupEvent event)
-    {
+    private void setup(final FMLCommonSetupEvent event) {
         LOGGER.info("Vault Mod Tweaks by alterNERDtive");
+    }
+
+    private void gatherData(final GatherDataEvent event) {
+        BlockTagsProvider blockTagsProvider = new BlockTagsProvider(event.getGenerator(), MOD_ID, event.getExistingFileHelper());
+        event.getGenerator().addProvider(blockTagsProvider);
+        event.getGenerator().addProvider(
+            (DataProvider) new TagManager(
+                event.getGenerator(),
+                blockTagsProvider,
+                MOD_ID,
+                event.getExistingFileHelper())
+        );
     }
 }

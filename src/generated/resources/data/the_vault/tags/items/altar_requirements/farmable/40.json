@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:twisting_vines",
+    "minecraft:weeping_vines",
+    "minecraft:big_dripleaf",
+    "minecraft:crimson_fungus",
+    "minecraft:warped_fungus",
+    "minecraft:chorus_fruit",
+    "minecraft:lily_pad"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:soul_soil",
+    "minecraft:purpur_block",
+    "minecraft:mycelium",
+    "minecraft:end_stone",
+    "minecraft:magma_block",
+    "minecraft:nether_wart_block",
+    "minecraft:warped_wart_block",
+    "minecraft:shroomlight",
+    "minecraft:podzol"
+  ]
+}

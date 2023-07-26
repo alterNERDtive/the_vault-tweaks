@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#the_vault:altar_requirements/mob/0",
+    "#the_vault:altar_requirements/mob/10",
+    "#the_vault:altar_requirements/mob/20",
+    "#the_vault:altar_requirements/mob/40",
+    "#the_vault:altar_requirements/mob/75"
+  ]
+}

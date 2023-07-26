@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:tropical_fish",
+    "minecraft:ghast_tear",
+    "minecraft:magma_cream",
+    "minecraft:nautilus_shell",
+    "minecraft:turtle_egg",
+    "minecraft:wither_skeleton_skull"
+  ]
+}
