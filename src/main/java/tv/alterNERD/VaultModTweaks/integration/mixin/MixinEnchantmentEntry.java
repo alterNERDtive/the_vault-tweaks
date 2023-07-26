@@ -57,7 +57,7 @@ public abstract class MixinEnchantmentEntry
         if (Configuration.FORTUNE_ENABLED.get()) {
             ResourceLocation registryName = this.enchantment.getRegistryName();
             if (registryName != null && registryName.toString().equals("minecraft:fortune")) {
-                maxFortune = Configuration.FORTUNE_LEVEL.get();
+                int maxFortune = Configuration.FORTUNE_LEVEL.get();
                 VaultModTweaks.LOGGER.info(I18n.get("the_vault_tweaks.log.inject.fortune.level", maxFortune));
                 this.level = maxFortune;
             }
