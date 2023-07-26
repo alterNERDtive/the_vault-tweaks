@@ -71,7 +71,7 @@ public class MixinVaultAltarBlock {
         ),
         cancellable = true
     )
-    private void onUse(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit, CallbackInfoReturnable<InteractionResult> ci) {
+    private void use$return(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit, CallbackInfoReturnable<InteractionResult> ci) {
         if (Configuration.ROUTER_VAULTAR_FIX.get() && !world.isClientSide && hand == InteractionHand.MAIN_HAND && player instanceof ServerPlayer) {
             ServerPlayer serverPlayer = (ServerPlayer)player;
             ItemStack heldItem = player.getMainHandItem();

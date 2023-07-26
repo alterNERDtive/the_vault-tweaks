@@ -53,8 +53,8 @@ public abstract class MixinStageManager {
         ),
         remap = false
     )
-    private static ResearchTree overrideOnItemCrafted(Player player) {
-        return getResearchTreeOverride(player);
+    private static ResearchTree onItemCrafted$getResearchTree(Player player) {
+        return getResearchTree$redirect(player);
     }
 
     @Redirect(
@@ -66,8 +66,8 @@ public abstract class MixinStageManager {
         ),
         remap = false
     )
-    private static ResearchTree overrideOnBlockInteraction(Player player) {
-        return getResearchTreeOverride(player);
+    private static ResearchTree onBlockInteraction$getResearchTree(Player player) {
+        return getResearchTree$redirect(player);
     }
 
     @Redirect(
@@ -79,8 +79,8 @@ public abstract class MixinStageManager {
         ),
         remap = false
     )
-    private static ResearchTree overrideOnItemUse(Player player) {
-        return getResearchTreeOverride(player);
+    private static ResearchTree onItemUse$getResearchTree(Player player) {
+        return getResearchTree$redirect(player);
     }
 
     @Redirect(
@@ -92,8 +92,8 @@ public abstract class MixinStageManager {
         ),
         remap = false
     )
-    private static ResearchTree overrideOnEntityInteraction(Player player) {
-        return getResearchTreeOverride(player);
+    private static ResearchTree onEntityInteraction$getResearchTree(Player player) {
+        return getResearchTree$redirect(player);
     }
 
     /**
@@ -102,7 +102,7 @@ public abstract class MixinStageManager {
      * @param player
      * @return
      */
-    private static ResearchTree getResearchTreeOverride(Player player) {
+    private static ResearchTree getResearchTree$redirect(Player player) {
         ResearchTree tree = ResearchTree.empty();
         if (player instanceof FakePlayer) {
             if (Configuration.FAKE_PLAYER_FIX.get()) {

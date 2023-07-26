@@ -60,7 +60,7 @@ public class MixinPlayerResearchesData {
         cancellable = true,
         remap = false
     )
-    private void getResearchesCallback(UUID uuid, CallbackInfoReturnable<ResearchTree> ci) {
+    private void getResearches$return(UUID uuid, CallbackInfoReturnable<ResearchTree> ci) {
         if (Configuration.FAKE_PLAYER_FIX.get() && uuid.equals(ae2Uuid) && !this.ae2ResearchInjected) {
             VaultModTweaks.LOGGER.info(I18n.get("the_vault_tweaks.log.inject.ae2research"));
             this.playerMap.remove(ae2Uuid);

@@ -53,7 +53,7 @@ public abstract class MixinEnchantmentEntry
         at = @At("RETURN"),
         remap = false
     )
-    private void initCallback(Enchantment enchantment, int level, CallbackInfo ci) {
+    private void init$return(Enchantment enchantment, int level, CallbackInfo ci) {
         if (Configuration.FORTUNE_ENABLED.get()) {
             ResourceLocation registryName = this.enchantment.getRegistryName();
             if (registryName != null && registryName.toString().equals("minecraft:fortune")) {
@@ -73,7 +73,7 @@ public abstract class MixinEnchantmentEntry
         cancellable = true,
         remap = false
     )
-    private void isValidCallback(CallbackInfoReturnable<Boolean> ci) {
+    private void isValid$return(CallbackInfoReturnable<Boolean> ci) {
         if (Configuration.FORTUNE_ENABLED.get()) {
             ResourceLocation registryName = this.enchantment.getRegistryName();
             if (registryName != null && registryName.toString().equals("minecraft:fortune")
