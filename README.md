@@ -12,7 +12,7 @@ The mod is configured via a server configuration file. To change settings, do th
 
 1. Create a new world and load into it / start your server.
 2. Close the world again / stop your server.
-3. Find the configuration file in `saves/<world name>/the_vault-tweaks-server.toml` (singleplayer) or `<world name>/the_vault-tweaks-server.toml` (server).
+3. Find the configuration file in `saves/<world name>/serverconfig/the_vault-tweaks-server.toml` (singleplayer) or `<world name>/serverconfig/the_vault-tweaks-server.toml` (server).
 4. Change accordingly. The file is heavily commented.
 
 ## Bug Fixes
