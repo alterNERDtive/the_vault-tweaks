@@ -1,6 +1,6 @@
 # devel
 
-
+* Removed spammy logging for the fake player research fix.
 
 # 3.11.1.1 (2023-07-26)
 

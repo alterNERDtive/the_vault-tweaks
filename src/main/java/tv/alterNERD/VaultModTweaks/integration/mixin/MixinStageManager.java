@@ -106,7 +106,8 @@ public abstract class MixinStageManager {
         ResearchTree tree = ResearchTree.empty();
         if (player instanceof FakePlayer) {
             if (Configuration.FAKE_PLAYER_FIX.get()) {
-                VaultModTweaks.LOGGER.info(I18n.get("the_vault_tweaks.log.inject.research.fakeplayerfix", player.getUUID()));
+                // Removed cause very spammy :)
+                // VaultModTweaks.LOGGER.info(I18n.get("the_vault_tweaks.log.inject.research.fakeplayerfix", player.getUUID()));
                 tree = PlayerResearchesData.get((ServerLevel) player.level).getResearches(player);
             }
         }
