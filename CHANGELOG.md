@@ -1,5 +1,7 @@
 # devel
 
+* Updated dependencies for Vault Hunters 3.11.2.
+* Updated tags for Vault Hunters 3.11.2.
 * Removed spammy logging for the fake player research fix.
 
 # 3.11.1.1 (2023-07-26)
