@@ -1,6 +1,16 @@
 {
   "replace": false,
   "values": [
+    "minecraft:stone",
+    "minecraft:gravel",
+    "minecraft:sand",
+    "minecraft:red_sand",
+    "minecraft:oak_log",
+    "minecraft:spruce_log",
+    "minecraft:birch_log",
+    "minecraft:jungle_log",
+    "minecraft:acacia_log",
+    "minecraft:dark_oak_log",
     "minecraft:moss_block",
     "minecraft:white_wool",
     "minecraft:orange_wool",

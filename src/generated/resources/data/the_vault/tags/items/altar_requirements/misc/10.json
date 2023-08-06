@@ -1,6 +1,11 @@
 {
   "replace": false,
   "values": [
+    "minecraft:pointed_dripstone",
+    "minecraft:gold_ingot",
+    "minecraft:redstone",
+    "minecraft:emerald",
+    "minecraft:lapis_lazuli",
     "minecraft:amethyst_shard",
     "minecraft:diamond",
     "minecraft:spore_blossom"

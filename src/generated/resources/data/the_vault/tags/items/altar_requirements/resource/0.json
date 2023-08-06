@@ -5,16 +5,6 @@
     "minecraft:diorite",
     "minecraft:andesite",
     "minecraft:granite",
-    "minecraft:stone",
-    "minecraft:gravel",
-    "minecraft:sand",
-    "minecraft:red_sand",
-    "minecraft:dirt",
-    "minecraft:oak_log",
-    "minecraft:spruce_log",
-    "minecraft:birch_log",
-    "minecraft:jungle_log",
-    "minecraft:acacia_log",
-    "minecraft:dark_oak_log"
+    "minecraft:dirt"
   ]
 }

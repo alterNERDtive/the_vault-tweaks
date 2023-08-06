@@ -1,6 +1,11 @@
 {
   "replace": false,
   "values": [
+    "minecraft:string",
+    "minecraft:rotten_flesh",
+    "minecraft:bone",
+    "minecraft:spider_eye",
+    "minecraft:arrow",
     "minecraft:feather",
     "minecraft:porkchop",
     "minecraft:beef",

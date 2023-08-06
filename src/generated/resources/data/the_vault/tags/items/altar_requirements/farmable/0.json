@@ -1,11 +1,7 @@
 {
   "replace": false,
   "values": [
-    "minecraft:sugar_cane",
-    "minecraft:carrot",
-    "minecraft:potato",
     "minecraft:wheat_seeds",
-    "minecraft:wheat",
     "minecraft:oak_leaves",
     "minecraft:spruce_leaves",
     "minecraft:birch_leaves",
