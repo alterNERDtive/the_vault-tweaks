@@ -1,4 +1,4 @@
-# devel
+# 3.11.2.1 (2023-08-07)
 
 * Updated dependencies for Vault Hunters 3.11.2.1.
 * Added tag for the new trash loot in Vaults (`the_vault:trash`).
