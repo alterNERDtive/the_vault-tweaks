@@ -2,8 +2,6 @@
 
 This little companion mod for the Vault mod of the Vault Hunters mod pack fixes a few bugs and brings a couple QoL and balance changes.
 
-All of these can be individually toggled and configured in a server config file. Bug fixes are enabled, balance changes disabled by default.
-
 If you enable the changes that affect expertises, I recommend a full expertise reset after installing this mod.
 
 ## Configuration
@@ -14,6 +12,8 @@ The mod is configured via a server configuration file. To change settings, do th
 2. Close the world again / stop your server.
 3. Find the configuration file in `saves/<world name>/serverconfig/the_vault-tweaks-server.toml` (singleplayer) or `<world name>/serverconfig/the_vault-tweaks-server.toml` (server).
 4. Change accordingly. The file is heavily commented.
+
+Bug fixes are enabled, balance changes disabled by default.
 
 ## Bug Fixes
 
