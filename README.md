@@ -24,6 +24,7 @@ Bug fixes are enabled, balance changes disabled by default.
 
 ## Miscellaneous
 
+* Added tags for the new Vault trash items found in loot chests (`the_vault:trash`).
 * Added support for making Vault Portals out of arbitrary blocks.
 * Added tags to all Vault Altar requirements:
   * `the_vault:altar_requirements`
