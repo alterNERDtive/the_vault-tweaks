@@ -1,6 +1,7 @@
 # devel
 
 * Updated dependencies for Vault Hunters 3.11.2.2.
+* Fixed jewel cutting tweaks being en-/disabled via the Jeweller expertise switch, the dedicated option now takes effect.
 
 # 3.11.2.1 (2023-08-07)
 

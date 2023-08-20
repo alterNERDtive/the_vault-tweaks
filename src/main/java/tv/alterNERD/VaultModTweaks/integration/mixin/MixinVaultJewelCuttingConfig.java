@@ -51,10 +51,14 @@ public abstract class MixinVaultJewelCuttingConfig extends Config {
     @Override
     protected void onLoad(Config oldConfigInstance) {
         super.onLoad(oldConfigInstance);
+
         if (Configuration.JEWELER_ENABLED.get()) {
             float chance = Configuration.JEWELER_CHANCE.get().floatValue();
             VaultModTweaks.LOGGER.info(I18n.get("the_vault_tweaks.log.inject.jewelcutting.failurechance", chance));
             this.jewelCuttingModifierRemovalChance = chance;
+        }
+
+        if (Configuration.JEWELS_ENABLED.get()) {
             int min = Configuration.JEWELS_MIN.get();
             int max = Configuration.JEWELS_MAX.get();
             VaultModTweaks.LOGGER.info(I18n.get("the_vault_tweaks.log.inject.jewelcutting.sizes", min, max));
