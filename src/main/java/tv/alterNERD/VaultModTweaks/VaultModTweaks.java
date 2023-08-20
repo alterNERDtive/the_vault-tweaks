@@ -26,10 +26,13 @@ import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.event.config.ModConfigEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
+import iskallia.vault.init.ModConfigs;
 import tv.alterNERD.VaultModTweaks.integration.TagManager;
+import tv.alterNERD.VaultModTweaks.util.I18n;
 
 @Mod("the_vault_tweaks")
 public class VaultModTweaks
@@ -40,6 +43,7 @@ public class VaultModTweaks
     public VaultModTweaks() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::gatherData);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::configLoaded);
         ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, Configuration.CONFIG);
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, Configuration.CLIENTCONFIG);
     }
@@ -58,5 +62,12 @@ public class VaultModTweaks
                 MOD_ID,
                 event.getExistingFileHelper())
         );
+    }
+
+    private void configLoaded(final ModConfigEvent event) {
+        if (event.getConfig().getType() == ModConfig.Type.SERVER) {
+            LOGGER.info(I18n.get("the_vault_tweaks.log.config.reloadvaultconfig"));
+            ModConfigs.register();
+        }
     }
 }

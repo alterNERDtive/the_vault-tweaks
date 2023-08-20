@@ -15,6 +15,8 @@
     "the_vault_tweaks.log.inject.vaultar.infusion": "Injecting Vault Altar infusion time: %1$ds …",
     "the_vault_tweaks.log.inject.vaultar.rock": "Injecting fake player interaction with Vault Altar …",
 
+    "the_vault_tweaks.log.config.reloadvaultconfig": "Config has changed, reloading Vault Mod configs …",
+
     "block.minecraft.andesite": "Andesite",
     "block.minecraft.polished_andesite": "Polished Andesite",
     "block.minecraft.andesite_stairs": "Andesite Stairs",

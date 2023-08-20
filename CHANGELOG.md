@@ -2,6 +2,7 @@
 
 * Updated dependencies for Vault Hunters 3.11.2.2.
 * Fixed jewel cutting tweaks being en-/disabled via the Jeweller expertise switch, the dedicated option now takes effect.
+* Fixed race condition between Vault Mod config loading and Tweaks Mod config loading; the Vault Mod config is now reloaded whenever the Tweaks Mod config is (re-)loaded. (fixes #9)
 
 # 3.11.2.1 (2023-08-07)
 
