@@ -54,10 +54,9 @@ public abstract class MixinTransmogTableBlock {
      */
     @Overwrite(remap = false)
     public static boolean canTransmogModel(Player player, Collection<ResourceLocation> discoveredModelIds, ResourceLocation modelId)  {
-        return ModDynamicModels.Armor.PIECE_REGISTRY.get(modelId).map(ArmorPieceModel::getArmorModel).map(armorModel -> {
+        long id = player.getUUID().getMostSignificantBits() ^ player.getUUID().getLeastSignificantBits();
+        String name = player.getName().getString();return ModDynamicModels.Armor.PIECE_REGISTRY.get(modelId).map(ArmorPieceModel::getArmorModel).map(armorModel -> {
             VaultModTweaks.LOGGER.debug(player.getName().getString());
-            long id = player.getUUID().getMostSignificantBits() ^ player.getUUID().getLeastSignificantBits();
-            String name = player.getName().getString();
             if (armorModel.equals(ModDynamicModels.Armor.CHAMPION)) {
                 return CHAMPION_LIST.contains(id) || Configuration.CHAMPIONS.get().contains(name);
             }
@@ -65,6 +64,11 @@ public abstract class MixinTransmogTableBlock {
                 return GOBLIN_LIST.contains(id) || CHAMPION_LIST.contains(id) || Configuration.GOBLINS.get().contains(name) || Configuration.CHAMPIONS.get().contains(name);
             }
             return null;
-        }).orElse(discoveredModelIds.contains(modelId));
+        }).orElseGet(() -> ModDynamicModels.Swords.REGISTRY.get(modelId).map(model -> {
+            if (model.equals(ModDynamicModels.Swords.GODSWORD)) {
+                return CHAMPION_LIST.contains(id) || Configuration.CHAMPIONS.get().contains(name);
+            }
+            return null;
+        }).orElse(discoveredModelIds.contains(modelId)));
     }
 }
