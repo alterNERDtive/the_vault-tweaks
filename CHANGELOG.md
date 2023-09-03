@@ -1,6 +1,7 @@
 # devel
 
 * Updated dependencies for Vault Hunters 3.11.3.
+* Added Livingrock Bricks to the `the_vault:trash` tag, now that it has soul value.
 
 # 3.11.2.2 (2023-08-20)
 
