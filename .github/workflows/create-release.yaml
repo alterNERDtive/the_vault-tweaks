@@ -1,4 +1,4 @@
-﻿name: Create release on tag push
+name: Create release on tag push
 
 on:
   push:
@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Checkout source code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2

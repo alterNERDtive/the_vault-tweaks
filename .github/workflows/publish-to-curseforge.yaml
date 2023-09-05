@@ -1,4 +1,4 @@
-﻿name: Publish to Curseforge on release
+name: Publish to Curseforge on release
 
 on:
   release:
@@ -16,7 +16,7 @@ jobs:
         run: echo "RELEASE_VERSION=${GITHUB_REF_NAME#release/}" >> $GITHUB_ENV
 
       - name: Checkout source code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Download release artifacts
         env:
