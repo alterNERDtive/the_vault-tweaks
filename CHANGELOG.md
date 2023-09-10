@@ -1,6 +1,7 @@
 # devel
 
 * Updated dependencies for Vault Hunters 3.11.4.
+* Added God Axe transmog to the super secret feature™.
 
 # 3.11.3.0 (2023-09-03)
 
