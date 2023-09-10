@@ -1,6 +1,6 @@
 # devel
 
-* 
+* Updated dependencies for Vault Hunters 3.11.4.
 
 # 3.11.3.0 (2023-09-03)
 
