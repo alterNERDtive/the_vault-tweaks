@@ -1,6 +1,6 @@
 # devel
 
-* 
+* Added support for overriding the new Jeweler Expertise; disabling it now grants 3 free cuts by default.
 
 # 3.12.1.0 (2023-11-09)
 

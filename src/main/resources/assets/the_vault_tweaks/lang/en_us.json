@@ -8,6 +8,7 @@
     "the_vault_tweaks.log.inject.fortune.level": "Injecting maximum Fortune level: %1$d …",
     "the_vault_tweaks.log.inject.fortune.valid": "Overwriting validity check for Fortune …",
     "the_vault_tweaks.log.inject.jewelcutting.failurechance": "Injecting jewel cutting failure chance: %1$.2f …",
+    "the_vault_tweaks.log.inject.jewelcutting.freecuts": "Injecting free jewel cuts: %1$d …",
     "the_vault_tweaks.log.inject.jewelcutting.sizes": "Injecting jewel cutting size values: %1$d–%2$d …",
     "the_vault_tweaks.log.inject.junkmgmt.upgrades": "Injecting Vault Junk Upgrade multipliers: %1$d, %2$d, %3$d, %4$d …",
     "the_vault_tweaks.log.inject.relicfragments": "Balancing relic fragment weights …",

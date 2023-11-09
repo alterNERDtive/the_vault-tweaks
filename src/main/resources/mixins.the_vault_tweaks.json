@@ -9,6 +9,7 @@
         "MixinCrystalBuddingConfig",
         "MixinEnchantmentEntry",
         "MixinExpertisesGuiConfig",
+        "MixinJewelExpertise",
         "MixinPlayerResearchesData",
         "MixinStageManager",
         "MixinToolType",

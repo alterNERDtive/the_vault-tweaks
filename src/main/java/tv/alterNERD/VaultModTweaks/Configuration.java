@@ -18,7 +18,6 @@
 package tv.alterNERD.VaultModTweaks;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import net.minecraft.resources.ResourceLocation;
@@ -41,6 +40,7 @@ public class Configuration {
 
     public static BooleanValue JEWELER_ENABLED;
     public static DoubleValue JEWELER_CHANCE;
+    public static IntValue JEWELER_FREE_CUTS;
 
     public static BooleanValue JEWELS_ENABLED;
     public static IntValue JEWELS_SIZE;
@@ -96,8 +96,11 @@ public class Configuration {
             .comment("Remove the Jeweler Expertise and change the default cutting chance accordingly")
             .define("disableJeweler", false);
         JEWELER_CHANCE = builder
-            .comment("Chance to break the jewel / remove a modifier")
+            .comment("Chance to break the jewel / remove a modifier (DEPRECATED since Vault Hunters 3.12.1)")
             .defineInRange("breakChance", 0.25d, 0d, 0.5d);
+        JEWELER_FREE_CUTS = builder
+            .comment("Number of free cuts (pack default: up to 3 with Jeweler Expetise)")
+            .defineInRange("free_cuts", 3, 0, 10);
         builder.pop();
 
         // Budding Crystal
