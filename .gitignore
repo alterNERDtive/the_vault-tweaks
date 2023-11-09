@@ -13,6 +13,9 @@ out
 *.iml
 .idea
 
+# jdk
+jdk-17.0.2
+
 # gradle
 build
 .gradle
