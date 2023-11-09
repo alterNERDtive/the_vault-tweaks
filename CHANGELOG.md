@@ -5,7 +5,7 @@
 # 3.12.1.0 (2023-11-09)
 
 * Updated dependencies for Vault Hunters 3.12.1.
-* Fixed Transmog Table mixin4 for 3.12.1.
+* Fixed Transmog Table mixin for 3.12.1.
 * Updated Vault Altar tags to reflect the Lvl 40 → Lvl 50 pool change.
 
 # 3.11.4.0 (2023-09-10)
