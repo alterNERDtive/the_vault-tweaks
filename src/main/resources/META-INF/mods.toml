@@ -35,6 +35,6 @@ There are some bug fixes and a lot of QoL and balance changes. See https://git.a
 [[dependencies.the_vault_tweaks]]
     modId="the_vault"
     mandatory=true
-    versionRange="[1.18.2-3.11.0.2835]"
+    versionRange="[1.18.2-3.11.0.2853]"
     ordering="AFTER"
     side="BOTH"
