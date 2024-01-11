@@ -1,5 +1,7 @@
 # devel
 
+Many thanks to @xyzminecraftserver for sponsoring the project!
+
 * 
 
 # 3.12.4.0 (2023-11-19)
