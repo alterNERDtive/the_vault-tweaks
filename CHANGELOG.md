@@ -2,7 +2,7 @@
 
 Many thanks to @xyzminecraftserver for sponsoring the project!
 
-* 
+* Updated dependencies for Vault Hunters 3.13.
 
 # 3.12.4.0 (2023-11-19)
 

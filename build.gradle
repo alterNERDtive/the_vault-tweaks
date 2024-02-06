@@ -24,9 +24,9 @@ apply plugin: 'eu.davidea.grabver'
 versioning {
     // Required (number)
     major 3
-    minor 12
+    minor 13
     // Optional, force custom patch (number)
-    patch 4
+    patch 0
     // Optional (any string)
     //preRelease "RC1"
     // Optional, custom task name to trigger the increase of the version
@@ -186,11 +186,11 @@ dependencies {
     // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft', it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.18.2-40.2.10'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.2.17'
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
-    implementation fg.deobf('curse.maven:vault-hunters-official-mod-458203:4879913')
+    implementation fg.deobf('curse.maven:vault-hunters-official-mod-458203:5076087')
     // implementation fg.deobf('curse.maven:vault-integrations-867003:4570137')
     // implementation fg.deobf("curse.maven:refined-storage-243076:3712882")
     implementation fg.deobf('appeng:appliedenergistics2-forge:11.7.0')
