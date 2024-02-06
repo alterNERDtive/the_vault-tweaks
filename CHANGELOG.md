@@ -1,6 +1,8 @@
-# devel
+# 3.13.0.0
 
 Many thanks to @xyzminecraftserver for sponsoring the project!
+
+This release is only rudimentarily tested since I am not currently playing the pack. Please report any issues you run into.
 
 * Updated dependencies for Vault Hunters 3.13.
 
