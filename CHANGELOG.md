@@ -2,7 +2,7 @@
 
 *
 
-# 3.13.0.0
+# 3.13.0.0 (2024-02-06)
 
 Many thanks to @xyzminecraftserver for sponsoring the project!
 
